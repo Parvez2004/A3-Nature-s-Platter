@@ -15,6 +15,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Daisyui component library for Tailwind CSS cdn link-->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Font Awesome kits link -->
+    <script src="https://kit.fontawesome.com/cdee393762.js" crossorigin="anonymous"></script>
     <!-- Tailwind CSS custom color  -->
     <script>
         tailwind.config = {
@@ -38,13 +40,60 @@
         .poppins-font {
             font-family: "Poppins", serif;
         }
+        .dropdown-content{
+            left: -120px;
+        }
     </style>
 </head>
 
 <body class="sora-font">
     <!-- Header Section Start -->
-    <header>
-
+    <header class="md:px-20 bg-gradient-to-t from-[#FFFFFF] to-[#EFEBE3] h-[120vh]">
+        <!-- Navbar section start -->
+        <nav>
+            <div class="navbar ">
+                <div class="navbar-start lg:w-[50%]  w-full flex justify-between ">
+                    <a class="btn btn-ghost"><img src="./images/logo-header.png" alt=""></a>
+                    
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16" />
+                      </svg>
+                    </div>
+                    <ul
+                      tabindex="0"
+                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2  shadow">
+                      <li><a>Product</a></li>
+                      <li><a>Services</a></li>
+                      <li><a>Contact us</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="navbar-center hidden lg:flex ">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><a>Product</a></li>
+                    <li><a>Services</a></li>
+                    <li><a>Contact us</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end hidden lg:flex space-x-4">
+                    <a><i class="fa-solid fa-magnifying-glass cursor-pointer"></i></a>
+                    <a><i class="fa-solid fa-cart-shopping cursor-pointer"></i></a>
+                  <a class="btn py-1 px-7 btn-outline border-nature-primary">Login</a>
+                  <a class="btn py-1 px-7 bg-nature-primary text-white">Register</a>
+                </div>
+              </div>
+        </nav>
     </header>
     <!-- Main Section Start -->
     <main>
